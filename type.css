@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Narrow';
+    src: url('fonts/RoutedGothicNarrow-Italic.woff2') format('woff2'),
+        url('fonts/RoutedGothicNarrow-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Narrow';
+    src: url('fonts/RoutedGothicNarrow.woff2') format('woff2'),
+        url('fonts/RoutedGothicNarrow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Wide';
+    src: url('fonts/RoutedGothicWide.woff2') format('woff2'),
+        url('fonts/RoutedGothicWide.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('fonts/RoutedGothic.woff2') format('woff2'),
+        url('fonts/RoutedGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('fonts/RoutedGothic-Italic.woff2') format('woff2'),
+        url('fonts/RoutedGothic-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}

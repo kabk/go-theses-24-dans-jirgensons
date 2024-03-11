@@ -1,0 +1,128 @@
+    #marks {
+        pointer-events: none;
+    }
+    
+    #marks > * {
+        opacity: 1;
+    }
+    
+    #marks > *, #marks > *:before, #marks > *:after {
+        position: fixed;
+        box-sizing: border-box;
+        z-index: 999;
+
+    }
+
+
+
+
+    #marks > *:before, #marks > *:after {
+        content: "";
+        /* animation: moving 50s infinite linear; */
+    }
+    .highlight > *:before, .highlight > *:after {
+        content: "";
+        animation: moving 50s infinite linear !important;
+        border-color:white !important;
+    }
+
+    #marks > *:not(.highlight):before,
+    #marks > *:not(.highlight):after {
+        animation: none; /* Remove animation when .saved class is not present */
+        transform: rotate(0deg); /* Ensure rotation returns to default state */
+        transition: transform .5s linear; /* Add transition for transform property */
+    }
+
+
+
+    #marks .top,
+    #marks .top:before,
+    #marks .top:after,
+    #marks .bottom,
+    #marks .bottom:before,
+    #marks .bottom:after {
+        border-left: 1px solid;
+        border-right: 1px solid;
+        height: 2rem;
+        mix-blend-mode:difference;
+        border-color:white;
+
+    }
+    
+    #marks .right,
+    #marks .right:before,
+    #marks .right:after,
+    #marks .left,
+    #marks .left:before,
+    #marks .left:after {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        width: 2rem;
+        mix-blend-mode:difference;
+        border-color:white;
+
+    }
+    
+    #marks .top {
+        width: 50%;
+        top: 0;
+        left: 25%;
+    }
+    #marks .top:before {
+        width: calc(100% - 2rem);
+        top: 0;
+        left: 1rem;
+    }
+    #marks .top:after {
+        width: 50%;
+        top: calc(25vh - 1rem);
+        left: 25%;
+    }
+    
+    #marks .right {
+        height: 50vh;
+        top: 25%;
+        right: 0;
+    }
+    #marks .right:before {
+        height: calc(100vh - 2rem);
+        top: 1rem;
+        right: 0;
+    }
+    #marks .right:after {
+        height: 50vh;
+        top: 25%;
+        right: calc(25% - 1rem);
+    }
+    
+    #marks .bottom {
+        width: 50%;
+        bottom: 0;
+        left: 25%;
+    }
+    #marks .bottom:before {
+        width: calc(100% - 2rem);
+        bottom: 0;
+        left: 1rem;
+    }
+    #marks .bottom:after {
+        width: 50%;
+        bottom: calc(25vh - 1rem);
+        left: 25%;
+    }
+    
+    #marks .left {
+        height: 50vh;
+        top: 25%;
+        left: 0;
+    }
+    #marks .left:before {
+        height: calc(100vh - 2rem);
+        top: 1rem;
+        left: 0;
+    }
+    #marks .left:after {
+        height: 50vh;
+        top: 25%;
+        left: calc(25% - 1rem);
+    }
