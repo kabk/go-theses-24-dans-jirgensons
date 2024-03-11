@@ -79,6 +79,7 @@ h1 {
   align-items: center;
   font-family:Narrow;
   flex-direction: column;
+  line-height:1.2;
 }
 
 .middle-column p {
@@ -454,7 +455,6 @@ span.chapter {
   }
   h1 {
     word-break:keep-all;
-    line-height:1.2;
   }
 #header {
   width: 100%;
