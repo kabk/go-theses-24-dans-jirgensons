@@ -486,4 +486,8 @@ span.chapter {
 .sidenote.active {
   display:block;
 }
+.sidenote:before, .figure-side:before, .figure-large:before {
+  height:12px;
+  padding-left:2ch;
+}
 }
