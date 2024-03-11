@@ -452,6 +452,10 @@ span.chapter {
     -webkit-hyphens: auto;
     hyphens: auto;
   }
+  h1 {
+    word-break:keep-all;
+    line-height:1.2;
+  }
 #header {
   width: 100%;
   padding: 24px;
