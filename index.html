@@ -23,17 +23,21 @@
       <h1><span class="chapter">Save As:</span>Black Holes and Archival Revelations</h1>
     </div>
   </div>
-    <!-- <div class="left-column"><details>
-      <summary><b>Table of Contents</b></summary>
-      <p>Abstract</p>
-      <p>Introduction</p>
-      <p><sup>Ch. 1</sup>Forever and Ever Before</p>
-      <p><sup>Ch. 2</sup>The Default Archive</p>
-      <p><sup>Ch. 3</sup>Digital Holes</p>
-      <p>Conclusion</p>
-      <p>Bibliography</p>
-    </details>
-    </div> -->
+    <div class="toc">
+      <div>
+      <p class="title"></p>
+      <div class="toc-content">
+      <a href="#abstract"><p>Abstract</p></a>
+      <a href="#introduction"><p>Introduction</p></a>
+      <a href="#chapter1"><p><sup>Ch. 1</sup>Forever and Ever Before</p></a>
+      <a href="#chapter2"><p><sup>Ch. 2</sup>The Default Archive</p></a>
+      <a href="#chapter3"><p><sup>Ch. 3</sup>Digital Holes</p></a>
+      <a href="#conclusion"><p>Conclusion</p></a>
+      <a href="#bibliography"><p>Bibliography</p></a>
+      <a href="#credits"><p>Credits</p></a>
+      </div>
+    </div>
+    </div>
 
     <div id="abstract" class="middle-column">
       
@@ -81,7 +85,7 @@
 
 
 
-    <div id="chapter-1" class="middle-column">
+    <div id="chapter1" class="middle-column">
       <h1><span class="chapter">Chapter 1.</span>Forever and Ever Before</h1>
       <p>Humanity’s longest-lasting remnants are found among the stars. There are thousands of satellites<span class="sidenote-wrapper"><label for="sn-10" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-10" class="margin-toggle"/><span class="sidenote"><span class="sidenote-content">“How Many Satellites Are in Space?” <em>NanoAvionics</em>, 2024, nanoavionics.com/blog/how-many-satellites-are-in-space/. Accessed 21 Feb. 2024.<br />
       <br />
@@ -477,7 +481,7 @@
     </div>
   </div>
 
-  <div id="copyright" class="middle-column">
+  <div id="credits" class="middle-column">
     <p style="font-family:Wide;">Thank you:</p>
     <p>Prof. Dr. Füsun Türetken, Bart de Baets, François Girard-Meunier, Thomas Buxo, <br>Sonya Umanskaya, Trang Le, Inge Maria Maier, Cecilie Fang, Kacper Werkowicz, Ivo Blackwood</p>
     <br>
@@ -487,7 +491,7 @@
     <script>
       window.addEventListener('scroll', function() {
         var fixedElement = document.getElementById('marks');
-        var chapterSpace = document.getElementById('chapter-1');
+        var chapterSpace = document.getElementById('chapter1');
         var rect = chapterSpace.getBoundingClientRect();
     
         if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {

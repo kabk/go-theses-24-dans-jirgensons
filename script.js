@@ -114,4 +114,32 @@ document.addEventListener('DOMContentLoaded', function() {
             figureIndication.classList.toggle('active');
         }
     }
+
+
+    //TOC
+
+    document.querySelector('.toc').addEventListener('click', function() {
+        var tocContent = document.querySelector('.toc-content');
+        tocContent.classList.toggle('open');
+      });
+
+
+      window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        var contentSections = document.querySelectorAll('.middle-column');
+        contentSections.forEach(function(section) {
+            var sectionId = section.getAttribute('id');
+            var sectionTop = section.offsetTop;
+            var sectionHeight = section.offsetHeight;
+            var tocLink = document.querySelector('.toc-content a[href="#' + sectionId + '"]');
+            if (tocLink) {
+                if (scrollPosition >= sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
+                    tocLink.classList.add('active');
+                } else {
+                    tocLink.classList.remove('active');
+                }
+            }
+        });
+    });
+    
 });
