@@ -121,7 +121,20 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.toc').addEventListener('click', function() {
         var tocContent = document.querySelector('.toc-content');
         tocContent.classList.toggle('open');
-      });
+        this.classList.toggle('open'); // Toggle open class on .toc element as well
+    });
+    
+    // TOC OUTSIDE CLOSE
+    document.body.addEventListener('click', function(event) {
+        var tocContent = document.querySelector('.toc-content');
+        var toc = document.querySelector('.toc');
+        if (!event.target.closest('.toc') && tocContent.classList.contains('open')) {
+            tocContent.classList.remove('open');
+            toc.classList.remove('open'); // Remove open class from .toc element as well
+        }
+    });
+
+
 
 
       window.addEventListener('scroll', function() {
@@ -141,5 +154,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
 });

@@ -180,6 +180,7 @@ h1, .figure-side, .figure-large, .sidenote {
 }
 .toc-content p sup {
   margin-right: 1ch;
+  vertical-align: baseline;
 }
 .toc-content a:hover {
   opacity:1;
