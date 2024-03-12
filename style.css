@@ -1,9 +1,3 @@
-/* @font-face {
-    font-family: BTO Grotesk;
-    src: url('media/fonts/BDOGrotesk-Light.woff2'), format('woff2');
-    font-weight: 300;
-} */
-
 ::selection {
   background: lightyellow;
   color: rgba(0, 0, 0, 0.99);
@@ -19,15 +13,15 @@
   box-sizing: border-box;
   /* list-style: none; */
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
-  /* -webkit-font-smoothing: antialiased;
-  font-smoothing:antialiased; */
   counter-reset: sidenote-counter figure-counter figuretxt-counter;
 }
 
@@ -39,6 +33,7 @@ body {
   font-size:16px;
   font-family:Regular;
 }
+
 i, em {
   font-family:Narrow;
   font-style:italic;
@@ -48,6 +43,7 @@ a, a:visited {
   color:inherit;
   text-decoration:none;
 }
+
 a:hover {
   opacity:0.5;
 }
@@ -69,7 +65,6 @@ ul {
   font-size:1rem;
 }
 
-
 h1 {
   font-size: 3rem;
   text-align: center;
@@ -88,6 +83,7 @@ h1 {
     line-height:1.3;
     text-align: justify;
 }
+
 .middle-column > p:nth-child(2) {
   text-indent:0;
 }
@@ -113,15 +109,19 @@ svg {
     font-weight: bold;
     text-transform: uppercase;
 }
+
 #header h1 {
   height:auto;
 }
+
 h1:hover {
   cursor:crosshair;
 }
+
 h1, .figure-side, .figure-large, .sidenote {
   user-select:none;
 }
+
 .toc {
   position: fixed;
   padding: 0 2rem;
@@ -157,35 +157,40 @@ h1, .figure-side, .figure-large, .sidenote {
 .toc-content {
   display: none;
 }
+
 .toc-content.open {
   display:block;
 }
+
 .toc .title {
   font-family:Wide;
   font-size:0.9rem;
   padding:0 1ch;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
 }
+
 .toc p {
   height:32px;
   background:black;
   line-height: 1.8;
 }
+
 .toc p:hover, .toc-content a.active p {
   color:black;
   background:white;
 }
+
 .toc-content p sup {
   margin-right: 1ch;
   vertical-align: baseline;
 }
+
 .toc-content a:hover {
   opacity:1;
 }
-
 
 .middle-column {
   background: white;
@@ -193,9 +198,11 @@ h1, .figure-side, .figure-large, .sidenote {
   clear: both;
     overflow: hidden;
 }
+
 img {
   width: 100%;
 }
+
 @keyframes moving {
   from {
     transform: rotate(0deg);
@@ -204,8 +211,6 @@ img {
     transform: rotate(360deg);
   }
 }
-
-
 
 
 
@@ -228,10 +233,6 @@ label.sidenote-number.active, .figure-indication.active {
     font-size: 60%;
     font-family: Wide;
 }
-/* .sidenote-number::after, .sidenote::before {
-  position: relative;
-  vertical-align: baseline;
-} */
 
 input.margin-toggle {
     display: none;
@@ -265,7 +266,6 @@ div.sidenote-wrapper, div.sidenote{
 }
 
 .sidenote:before {
-  /* content: "Sidenote Nr. " counter(sidenote-counter) " \25BA"; */
   content: "Note " counter(sidenote-counter) ".";
   margin-right: 1rem;
     display: inline-block;
@@ -280,53 +280,32 @@ div.sidenote-wrapper, div.sidenote{
     font-family: Wide;
     font-size: 0.9rem;
 }
-/* summary:before {
-  content: "Sidenote Nr. " counter(sidenote-counter);
-} */
 
 label.margin-toggle:not(.sidenote-number) {
         display: inline;
-    }
-
-    /* .sidenote-wrapper {
-      cursor:pointer;
-    }
-     */
-
-     /* for footnotes do appear only on click */
-    /* .sidenote,
-    .marginnote {
-        display: none;
-    } 
-
-    .margin-toggle:checked + .sidenote,
-    .margin-toggle:checked + .marginnote {
-      display: block;
-    }  */
-
-
-/* details {
-  display:inline;
-} */
+}
 
 .sidenote-content {
   line-height: 0;
   display:none;
 }
+
 .sidenote-content.active {
   display:inline;
 }
+
 #chapter1, #bibliography, .header-column {
 background:black;
 }
+
 .figure-large {
   margin:2rem 0;
   cursor:pointer;
 }
+
 .figure-large:before {
   counter-increment: figure-counter;
   content: "Figure " counter(figure-counter) ".";
-  /* margin-right: 1rem; */
     display: inline-block;
     background-image: url(icons/jpeg.png);
     background-size: contain;
@@ -343,15 +322,17 @@ background:black;
 .figure-large-image, .figure-side-image {
   border:1px solid black;
 }
+
 .figure-large-image img {
   opacity:0;
 }
+
 .figure-large p, .figure-side p {
   font-size:1rem;
   text-indent:0;
-  font-family:Narrow
-
+  font-family:Narrow;
 }
+
 .figure-large .info, .figure-side .info {
   text-align:left;
   display:inline;
@@ -368,16 +349,14 @@ background:black;
   padding: 0 2rem;
   margin-bottom: 2rem;
   cursor: pointer;
-  /* float: left; */
-    clear: left;
-    /* margin-left: -50%; */
-    vertical-align: baseline;
-    position: relative;
+  clear: left;
+  vertical-align: baseline;
+  position: relative;
 }
+
 .figure-side:before {
   counter-increment: figure-counter;
   content: "Figure " counter(figure-counter) ".";
-  /* margin-right: 1rem; */
     display: inline-block;
     background-image: url(icons/jpeg.png);
     background-size: contain;
@@ -426,6 +405,7 @@ background:black;
 #bibliography h1, #bibliography p, .header-column {
   color:white;
 }
+
 #chapter1 .figure-large-image, #chapter1 .figure-side-image {
   border-color:white;
 }
@@ -459,6 +439,7 @@ background:black;
   text-indent:0;
   font-size:1rem;
 }
+
 #credits img {
   width:88px;
   margin-left:auto;
@@ -538,7 +519,6 @@ span.chapter {
   height:12px;
   padding-left:2ch;
 }
-
 .toc {
   min-height: 24px;
     padding: 0;
