@@ -559,4 +559,10 @@ span.chapter {
 .toc p.title {
   height:24px;
 }
+p.noindent {
+  text-indent: 4rem;
+}
+p.noindentmob {
+  text-indent:0;
+}
 }
